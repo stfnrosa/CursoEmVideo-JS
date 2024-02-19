@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual é seu nome?")
+        var sexo = window.prompt("Qual é seu sexo(F/M)?")
+        var valor = window .prompt("Qual o valor a ser comprado?")
+        var descontom = valor - (valor * 0,05)
+        var descontof = valor - (valor * 0,13)
+        document.write(`Sr(a). ${nome} o seu desconto foi aplicado, `)
+        document.write( sexo == "F" ? "o valor a ser pago é de R$" + descontof.toFixed(2).replace('.',','):"o valor a ser pago é de R$" + descontom.toFixed(2).replace('.',',') )
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia das Mulheres</title>
+   <style>
+    body{
+        background-color: #a20202;
+        font-size: 16pt;               
+    }
+    input#button{
+        background-color: #c44d4d;
+        width: 200px;
+        height: 50px;
+        border-color: #a92121;
+        border-width: 5px;
+    }
+    
+   </style> 
+</head>
+<body>
+    <h1>Feliz Dia Das Mulheres!</h1>
+    Temos descontos para todos: <br>
+    Mulheres ganham 13% de desconto na compra de qualquer produtos da loja.<br>
+    Para os homens temos desconto de 5% para você presentear sua mulher amada.Para começar preencha abaixo as perguntas:<br>
+    Qual seu nome: <input type="text" name="nm" id="nm">
+    Qual valor das compras:
+    <input type="number" name="gast" id="gast">
+    Sexo[F/M]: <input type="text" name="sexo" id="sexo"> 
+    <input id="button" type="button" value="Aplicar Desconto" onclick="clicar()"> 
+    <div id="rst">
+    </div>
+<script>
+    function clicar(){
+        var nome = String(document.getElementById("nm").value)
+        var valores = Number(document.getElementById(gast).value)
+        var sex = String(document.getElementById("sexo").value)
+        var res = document.getElementById("rst")
+        res.innerHTML = `Senhor(a) ${nome},`
+        if(sex=="F"){
+            res.innerHTML += ` o valor da sua compra será de R$${(valores-(valores*0.13)).toFixed(2).replace('.',',')}!`
+        }else{
+            res.innerHTML += ` o valor da sua compra será de R$${(valores-(valores*0.05)).toFixed(2).replace('.',',')}!`
+        }
+    }
+ 
+
+</script>
+
+</body>
+</html>
